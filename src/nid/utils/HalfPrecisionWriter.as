@@ -39,12 +39,11 @@
  */
 package nid.utils
 {
-	import nid.xfl.compiler.swf.SWFData;
 	
 	public class HalfPrecisionWriter
 	{
 		
-		public static function write(value:Number, data:SWFData):void
+		public static function write(value:Number, data:BinaryData):void
 		{
 			
 			data.resetBitsPending();

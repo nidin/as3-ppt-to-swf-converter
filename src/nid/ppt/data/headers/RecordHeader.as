@@ -11,11 +11,20 @@ package nid.ppt.data.headers
 		public var recType:uint
 		public var recLen:uint
 		
-		public function RecordHeader() 
+		public function RecordHeader(recVer:uint, recInstance:uint, recType:uint, recLen:uint)
 		{
-			
+			this.recVer = recVer;
+			this.recInstance = recInstance;
+			this.recType = recType;
+			this.recLen = recLen;
 		}
-		
+		public function toString():String
+		{
+			return 'recVer:' + recVer + '/n' +
+				   'recInstance:' + recInstance + '/n' +
+				   'recType:' + recInstance + '/n' +
+				   'recLen:' + recInstance;
+		}
 	}
 
 }
