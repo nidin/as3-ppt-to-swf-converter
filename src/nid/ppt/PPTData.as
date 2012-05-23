@@ -4,7 +4,7 @@ package nid.ppt
 	
 	/**
 	 * ...
-	 * @author ...
+	 * @author Nidin P Vinayakan
 	 */
 	public class PPTData extends BinaryData 
 	{

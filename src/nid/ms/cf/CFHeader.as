@@ -3,7 +3,7 @@ package nid.ms.cf
 	import nid.utils.BinaryData;
 	/**
 	 * ...
-	 * @author ...
+	 * @author Nidin P Vinayakan
 	 */
 	public class CFHeader 
 	{

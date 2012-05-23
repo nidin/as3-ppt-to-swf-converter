@@ -6,6 +6,11 @@
 	import nid.utils.BitArray;
 	import nid.utils.HalfPrecisionWriter;
 	
+	/**
+	 * ...
+	 * @author Nidin P Vinayakan
+	 */
+	
 	public class BinaryData extends BitArray
 	{
 		public static const FLOAT16_EXPONENT_BASE:Number = 15;

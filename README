@@ -1,6 +1,7 @@
-/************************************/
-	AS3 PPT TO SWF CONVERTER README
-/************************************/
+/**
+ * AS3 PPT TO SWF CONVERTER README
+ * @author : Nidin P Vinayakan
+ */
 
 This ia a library for convert Power Point Presentations to SWF file
 written in Action Script 3

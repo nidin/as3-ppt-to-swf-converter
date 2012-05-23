@@ -6,7 +6,7 @@ package nid.ms
 	import nid.utils.BinaryData;
 	/**
 	 * ...
-	 * @author ...
+	 * @author Nidin P Vinayakan
 	 */
 	public class CompoundFile 
 	{
