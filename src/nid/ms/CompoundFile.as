@@ -1,6 +1,7 @@
 package nid.ms 
 {
 	import nid.ms.cf.CFHeader;
+	import nid.ms.cf.Directory;
 	import nid.ms.cf.FAT;
 	import nid.ms.cf.MiniFAT;
 	import nid.utils.BinaryData;
@@ -13,12 +14,14 @@ package nid.ms
 		public var header:CFHeader;
 		public var fat:FAT;
 		public var miniFat:MiniFAT;
+		public var dir:Directory;
 		
 		public function CompoundFile(bytes:BinaryData) 
 		{
 			header 	= new CFHeader(bytes);
 			fat 	= new FAT(bytes, header.firstFatSectorLocation, header.sectorSize);
 			miniFat = new MiniFAT(bytes, header.firstFatSectorLocation, header.sectorSize);
+			dir		= new Directory(bytes, header.firstDirectorySectorLocation, header.sectorSize);
 		}
 		
 		public function toString():String

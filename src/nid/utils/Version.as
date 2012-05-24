@@ -2,11 +2,11 @@ package nid.utils
 {
   public final class Version
   {
-      static public const Major:int = 1;
-      static public const Minor:int = 0;
-      static public const Build:int = 2;
-      static public const Revision:int = 0;
-      static public const Timestamp:String = "8/9/2011 6:40:16 PM";
-      static public const Author:String = "Nidin P Vinayakan";
+      public static const Major:int = 1;
+      public static const Minor:int = 0;
+      public static const Build:int = 3;
+      public static const Revision:int = 0;
+      public static const Timestamp:String = "24/05/12 10:04:33 AM";
+      public static const Author:String = "Nidin P Vinayakan";
   }
 }

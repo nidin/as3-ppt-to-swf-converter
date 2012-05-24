@@ -9,7 +9,7 @@ package
 	 */
 	public class PPT2SWFConverter extends Sprite 
 	{
-		[Embed(source = "../sample/sample.ppt", mimeType = "application/octet-stream")]
+		[Embed(source="../bin/samples/sample.ppt", mimeType="application/octet-stream")]
 		private var ppt_data:Class;
 		
 		public function PPT2SWFConverter() 
