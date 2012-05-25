@@ -28,7 +28,8 @@ package nid.ms
 		{
 			return  '[CFB]\n' + header.toString() + 
 					'\n\t[FAT]\n\t ' + fat.toString() + 
-					'\n\t[MiniFAT]\n\t ' + miniFat.toString();
+					'\n\t[MiniFAT]\n\t ' + miniFat.toString() +
+					'\n\t[Directory]\n ' + dir.toString();
 		}
 		
 	}
