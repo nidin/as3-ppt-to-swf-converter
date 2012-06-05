@@ -9,13 +9,15 @@ package nid.ms.cf
 	{
 		public var sectors:Vector.<Sector>;
 		
-		public function MiniFAT(bytes:BinaryData, sector_num:uint, sectorSize:uint) 
+		public function MiniFAT(bytes:BinaryData, header:CFHeader) 
 		{
-			bytes.position = (sector_num + 1) * sectorSize;
+			bytes.position = (header.firstMiniFATSectorLocation + 1) * header.sectorSize;
+			
+			trace('MiniFAT offset:' + bytes.position);
 			
 			sectors = new Vector.<Sector>();
 			
-			for (var i:int = 0; i < 128; i++)
+			for (var i:int = 0; i < header.numberOfMiniFATSectors * 128; i++)
 			{
 				sectors.push(new Sector(bytes));
 			}

@@ -1,5 +1,6 @@
 package nid.ms.cf 
 {
+	import flash.utils.ByteArray;
 	import nid.utils.BinaryData;
 	/**
 	 * ...
@@ -19,7 +20,9 @@ package nid.ms.cf
 		public var creationTime:String;
 		public var modifiedTime:String;
 		public var startingSectorLocation:uint;
-		public var streamSize:String;
+		public var streamSizeLow:uint;
+		public var streamSizeHigh:uint;
+		public var data:ByteArray;
 		
 		public function DirectoryEntry(bytes:BinaryData) 
 		{
@@ -37,8 +40,9 @@ package nid.ms.cf
 			//modifiedTime	= bytes.readMultiByte(8, "");
 			bytes.position += 16;
 			startingSectorLocation = bytes.readUI32();
-			//streamSize		= bytes.readMultiByte(8, "");
-			bytes.position += 8;
+			streamSizeLow		= bytes.readUI32();
+			streamSizeHigh		= bytes.readUI32();
+			//bytes.position += 8;
 		}
 		public function toString():String
 		{
@@ -55,7 +59,8 @@ package nid.ms.cf
 					'	creationTime:' + creationTime + '\n' +
 					'	modifiedTime:' + modifiedTime + '\n' +
 					'	startingSectorLocation:' + startingSectorLocation + '\n' +
-					'	streamSize:' + streamSize;
+					'	streamSizeLow:' + streamSizeLow + '\n' +
+					'	streamSizeHigh:' + streamSizeHigh;
 		}
 		
 	}

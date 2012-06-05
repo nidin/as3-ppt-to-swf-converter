@@ -6,8 +6,8 @@
     <movie input="" />
     <movie path="bin\as3ppttoswf.swf" />
     <movie fps="30" />
-    <movie width="800" />
-    <movie height="600" />
+    <movie width="100" />
+    <movie height="100" />
     <movie version="10" />
     <movie minorVersion="0" />
     <movie platform="Flash Player" />

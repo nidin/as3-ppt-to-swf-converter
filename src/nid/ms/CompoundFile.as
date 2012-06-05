@@ -19,9 +19,9 @@ package nid.ms
 		public function CompoundFile(bytes:BinaryData) 
 		{
 			header 	= new CFHeader(bytes);
-			fat 	= new FAT(bytes, header.firstFatSectorLocation, header.sectorSize);
-			miniFat = new MiniFAT(bytes, header.firstFatSectorLocation, header.sectorSize);
-			dir		= new Directory(bytes, header.firstDirectorySectorLocation, header.sectorSize);
+			fat 	= new FAT(bytes, header);
+			miniFat = new MiniFAT(bytes, header);
+			dir		= new Directory(bytes, header);
 		}
 		
 		public function toString():String

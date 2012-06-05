@@ -9,11 +9,15 @@ package nid.ms.cf
 	{
 		private var entries:Vector.<DirectoryEntry>;
 		
-		public function Directory(bytes:BinaryData, sector_num:uint, sectorSize:uint) 
+		public function Directory(bytes:BinaryData, header:CFHeader) 
 		{
+			bytes.position = (header.firstDirectorySectorLocation + 1) * header.sectorSize;
+			
+			trace('Directory offset:' + bytes.position);
+			
 			entries = new Vector.<DirectoryEntry>();
-			var length:uint = 12;
-			for (var i:int = 0; i < length; i++)
+			
+			for (var i:int = 0; i < 4; i++)
 			{
 				entries.push(new DirectoryEntry(bytes));
 			}
