@@ -15,7 +15,7 @@ package
 		public function PPT2SWFConverter() 
 		{
 			var ppt:PPT = new PPT(new ppt_data());
-			trace(ppt);
+			//trace(ppt);
 		}
 		
 	}

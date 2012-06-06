@@ -7,6 +7,11 @@ package nid.ms.cf
 	 */
 	public class FAT 
 	{
+		public static const FATSECT:uint = 0xFFFFFFFD;
+		public static const DIFSECT:uint = 0xFFFFFFC;
+		public static const FREESECT:uint = 0xFFFFFFFF;
+		public static const ENDOFCHAIN:uint = 0xFFFFFFFE;
+		
 		public var sectors:Vector.<Sector>;
 		
 		public function FAT(bytes:BinaryData, header:CFHeader) 

@@ -7,7 +7,7 @@ package nid.ms.cf
 	 */
 	public class Directory 
 	{
-		private var entries:Vector.<DirectoryEntry>;
+		public var entries:Vector.<DirectoryEntry>;
 		
 		public function Directory(bytes:BinaryData, header:CFHeader) 
 		{

@@ -43,6 +43,7 @@ package nid.ms.cf
 			streamSizeLow		= bytes.readUI32();
 			streamSizeHigh		= bytes.readUI32();
 			//bytes.position += 8;
+			data = new ByteArray();
 		}
 		public function toString():String
 		{
