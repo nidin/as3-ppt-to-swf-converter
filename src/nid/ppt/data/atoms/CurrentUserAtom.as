@@ -2,6 +2,7 @@ package nid.ppt.data.atoms
 {
 	import nid.ppt.data.headers.RecordHeader;
 	import nid.ppt.factory.RecordType;
+	import nid.ppt.PPTData;
 	/**
 	 * ...
 	 * @author Nidin P Vinayakan
@@ -49,12 +50,12 @@ package nid.ppt.data.atoms
 		/**
 		 * Undefined and MUST be ignored
 		 */
-		public var unused
+		public var unused:uint
 		/**
 		 * A PrintableAnsiString that specifies the user name of the last user to modify the file. 
 		 * The length, in bytes, of the field is specified by the lenUserName field.
 		 */
-		public var ansiUserName
+		public var ansiUserName:String
 		/**
 		 * An unsigned integer that specifies the release version of the file format. 
 		 * It MUST be a value from the following table.
@@ -65,14 +66,14 @@ package nid.ppt.data.atoms
 		 * to modify the file. The length, in bytes, of the field is specified by 2 * lenUserName. 
 		 * This user name supersedes that specified by the ansiUserName field. It MAY<8> be omitted.
 		 */
-		public var unicodeUserName
+		public var unicodeUserName:String
 		
-		public function CurrentUserAtom() 
+		public function CurrentUserAtom(pptBytes:PPTData) 
 		{
 			rh = new RecordHeader();
 			rh.recVer = 0x0;
 			rh.recInstance = 0x000;
-			rh.recType = RecordType.RT_Document
+			rh.recType = RecordType.RT_CurrentUserAtom;
 		}
 		
 	}

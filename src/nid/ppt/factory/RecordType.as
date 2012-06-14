@@ -220,7 +220,7 @@ package nid.ppt.factory
 		public static const RT_TimeAnimationValueList:uint=0xF13F
 		public static const RT_TimeIterateData:uint=0xF140
 		public static const RT_TimeSequenceData:uint=0xF141
-		public static const RT_TimeVariant=0xF142
+		public static const RT_TimeVariant:uint=0xF142
 		public static const RT_TimeAnimationValue:uint=0xF143
 		public static const RT_TimeExtTimeNodeContainer:uint=0xF144
 		public static const RT_TimeSlaveContainer:uint=0xF145
