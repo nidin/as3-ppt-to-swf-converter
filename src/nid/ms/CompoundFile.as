@@ -81,7 +81,7 @@ package nid.ms
 			
 			while (miniFat.sectors.length > si && miniFat.sectors[si].value != FAT.ENDOFCHAIN)
 			{
-				trace('sect:' + si);
+				//trace('sect:' + si);
 				si = miniFat.sectors[si].value;
 				bytes.position = si * 64;
 				//trace('bytes.position:' + bytes.position, bytes.length);
@@ -119,7 +119,7 @@ package nid.ms
 			while (fat.sectors.length > si && fat.sectors[si].value != FAT.ENDOFCHAIN)
 			{
 				si = fat.sectors[si].value;
-				trace('sect:' + si);
+				//trace('sect:' + si);
 				bytes.position = (si + 1) * header.sectorSize;
 				try {
 					bytes.readBytes(d.data, d.data.length, header.sectorSize);

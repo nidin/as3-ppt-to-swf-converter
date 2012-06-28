@@ -28,10 +28,9 @@ package nid.ppt
 		public function PPT(ba:ByteArray = null) 
 		{
 			pptBytes = new PPTData();
-			super(ba);
 			if (ba != null)
 			{
-				parse();
+				loadBytes(ba);
 			}
 		}
 		override public function loadBytes(ba:ByteArray):void 
@@ -42,8 +41,8 @@ package nid.ppt
 		private function parse():void 
 		{
 			super.getDirectoryByName('PowerPoint Document').data.readBytes(pptBytes);
-			//System.setClipboard(HexUtils.dumpByteArray(pptBytes));
-			//parseHeader();
+			System.setClipboard(HexUtils.dumpByteArray(pptBytes));
+			parseHeader();
 		}
 		
 		protected function parseHeader():void 

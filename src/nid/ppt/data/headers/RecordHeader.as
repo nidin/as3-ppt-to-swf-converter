@@ -20,10 +20,7 @@ package nid.ppt.data.headers
 		}
 		public function toString():String
 		{
-			return 'recVer:' + recVer + '\n' +
-				   'recInstance:' + recInstance + '\n' +
-				   'recType:' + recInstance + '\n' +
-				   'recLen:' + recInstance;
+			return '[RecordHeader]recVer:' + recVer + ', recInstance:' + recInstance + ', recType:' + recInstance + ' recLen:' + recInstance;
 		}
 	}
 
