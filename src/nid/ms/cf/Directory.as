@@ -17,7 +17,7 @@ package nid.ms.cf
 			
 			entries = new Vector.<DirectoryEntry>();
 			
-			for (var i:int = 0; i < 4; i++)
+			for (var i:int = 0; i < 8; i++)
 			{
 				entries.push(new DirectoryEntry(bytes));
 			}
