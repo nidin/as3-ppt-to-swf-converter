@@ -102,7 +102,6 @@ package nid.ms
 				bytes.readBytes(d.data, d.data.length, lastSectorSize);
 			}
 			
-			
 			trace('count:' + count);
 			trace(d.data.length);
 			trace(d.data);
